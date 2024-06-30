@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Malt</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-sm-4">
+                <div class="thumbnail-gallery">
+                    <img src="img/Nissy/1.jpg" class="img-thumbnail mb-2" alt="Thumbnail 1"
+                        onclick="changeImage('img/Nissy/1.jpg')">
+                    <img src="img/Nissy/2.jpg" class="img-thumbnail mb-2" alt="Thumbnail 2"
+                        onclick="changeImage('img/Nissy/2.jpg')">
+                    <img src="img/Nissy/Newimages/3.jpg" class="img-thumbnail mb-2" alt="Thumbnail 3"
+                        onclick="changeImage('img/Nissy/Newimages/3.jpg')">
+                    <img src="img/Nissy/Newimages/2.jpg" class="img-thumbnail mb-2" alt="Thumbnail 4"
+                        onclick="changeImage('img/Nissy/Newimages/2.jpg')">
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-8 col-sm-8">
+                <div id="productCarousel" class="carousel slide">
+                    <div class="carousel-inner main-image">
+                        <div class="carousel-item active">
+                            <img src="img/Nissy/1.jpg" class="d-block w-100 zoom" id="mainProductImage"
+                                alt="Main Product Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Nissy/2.jpg" class="d-block w-100 zoom" alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Nissy/Newimages/3.jpg" class="d-block w-100 zoom" alt="Image 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Nissy/Newimages/2.jpg" class="d-block w-100 zoom" alt="Image 4">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12">
+                <h1>ABC Malt (Home Made Health Drink)</h1>
+
+                <h2>₹420.00 – ₹1,060.00</h2>
+                <p>ABC (Malt Home Made Health Drink) Apple, beetroot, and carrot mixed malt is a nutritious and
+                    refreshing beverage. It's a delightful blend of flavors, packed with vitamins and minerals. It's a
+                    perfect choice for a healthy and energizing drink.</p>
+                <div class="row">
+                    <div class="col">
+                        <p>WEIGHT</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="weight" id="weight1" value="1KG" checked>
+                            <label class="form-check-label" for="weight1">
+                                1KG
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="weight" id="weight2" value="250GM">
+                            <label class="form-check-label" for="weight2">
+                                250GM
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="weight" id="weight3" value="500GM">
+                            <label class="form-check-label" for="weight3">
+                                500GM
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col">
+                        <button type="button" class="btn btn-primary me-2">ADD TO CART</button>
+                        <button type="button" class="btn btn-success">BUY NOW</button>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col">
+                        <p>Estimated Delivery: Thursday, Jun 13 - Tuesday, Jun 18</p>
+                    </div>
+                </div>
+                <div class="row mt-3 view-more">
+                    <div class="col">
+                        <p>9 people are viewing this right now</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+      
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Script.js"></script>
+
+</body>
+
+</html>
+<style>
+    body {
+        background-color: #f8f9fa;
+        font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .rating {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .rating span {
+        font-size: 1.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .rating span:last-child {
+        font-size: 1rem;
+        color: #6c757d;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        color: #28a745;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .weight-options label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    .thumbnail-gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .thumbnail-gallery .img-thumbnail {
+        width: 100px;
+        cursor: pointer;
+    }
+
+    .carousel-control-next {
+        right: 30px;
+    }
+
+    .main-image {
+        text-align: center;
+    }
+
+    .main-image img {
+        max-width: 94%;
+    }
+
+    .zoom {
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .zoom:hover {
+        transform: scale(1.2);
+    }
+</style>
