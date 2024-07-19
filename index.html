@@ -499,7 +499,7 @@
         name: 'Crab Pool Security',
         price: '$30.00',
         image: 'img/Nissy/Newimages/3.jpg',
-        category: 'oranges fresh-meat',
+        category: 'oranges',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam odio quidem aliquid voluptatem veritatis maxime eaque voluptatum expedita illo excepturi atque at assumenda quod, delectus ipsa aliquam cupiditate cum tempora.',
         weightOptions: ['1L', '250ml', '500ml'],
         images: ['img/Nissy/Newimages/3.jpg', 'img/Nissy/Newimages/6.jpg']
@@ -509,7 +509,77 @@
         name: 'Crab Pool Security',
         price: '$30.00',
         image: 'img/Nissy/Newimages/2.jpg',
-        category: 'oranges fresh-meat',
+        category: 'oranges',
+        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam odio quidem aliquid voluptatem veritatis maxime eaque voluptatum expedita illo excepturi atque at assumenda quod, delectus ipsa aliquam cupiditate cum tempora.',
+        weightOptions: ['1L', '250ml', '500ml'],
+        images: ['img/Nissy/Newimages/3.jpg', 'img/Nissy/Newimages/6.jpg']
+    },
+    {
+        id: 3,
+        name: 'Crab Pool Security',
+        price: '$30.00',
+        image: 'img/Nissy/Newimages/4.jpg',
+        category: 'fresh-meat',
+        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam odio quidem aliquid voluptatem veritatis maxime eaque voluptatum expedita illo excepturi atque at assumenda quod, delectus ipsa aliquam cupiditate cum tempora.',
+        weightOptions: ['1L', '250ml', '500ml'],
+        images: ['img/Nissy/Newimages/3.jpg', 'img/Nissy/Newimages/6.jpg']
+    },
+    {
+        id: 4,
+        name: 'Crab Pool Security',
+        price: '$30.00',
+        image: 'img/Nissy/Newimages/5.jpg',
+        category: 'fresh-meat',
+        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam odio quidem aliquid voluptatem veritatis maxime eaque voluptatum expedita illo excepturi atque at assumenda quod, delectus ipsa aliquam cupiditate cum tempora.',
+        weightOptions: ['1L', '250ml', '500ml'],
+        images: ['img/Nissy/Newimages/3.jpg', 'img/Nissy/Newimages/6.jpg']
+    },
+    {
+        id: 5,
+        name: 'Crab Pool Security',
+        price: '$30.00',
+        image: 'img/Nissy/Newimages/6.jpg',
+        category: 'vegetables',
+        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam odio quidem aliquid voluptatem veritatis maxime eaque voluptatum expedita illo excepturi atque at assumenda quod, delectus ipsa aliquam cupiditate cum tempora.',
+        weightOptions: ['1L', '250ml', '500ml'],
+        images: ['img/Nissy/Newimages/3.jpg', 'img/Nissy/Newimages/6.jpg']
+    },
+    {
+        id: 6,
+        name: 'Crab Pool Security',
+        price: '$30.00',
+        image: 'img/Nissy/Newimages/7.jpg',
+        category: 'vegetables',
+        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam odio quidem aliquid voluptatem veritatis maxime eaque voluptatum expedita illo excepturi atque at assumenda quod, delectus ipsa aliquam cupiditate cum tempora.',
+        weightOptions: ['1L', '250ml', '500ml'],
+        images: ['img/Nissy/Newimages/3.jpg', 'img/Nissy/Newimages/6.jpg']
+    },
+    {
+        id: 7,
+        name: 'Crab Pool Security',
+        price: '$30.00',
+        image: 'img/Nissy/Newimages/8.jpg',
+        category: 'fastfood',
+        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam odio quidem aliquid voluptatem veritatis maxime eaque voluptatum expedita illo excepturi atque at assumenda quod, delectus ipsa aliquam cupiditate cum tempora.',
+        weightOptions: ['1L', '250ml', '500ml'],
+        images: ['img/Nissy/Newimages/3.jpg', 'img/Nissy/Newimages/6.jpg']
+    },
+    {
+        id: 8,
+        name: 'Crab Pool Security',
+        price: '$30.00',
+        image: 'img/Nissy/Newimages/9.jpg',
+        category: 'fastfood',
+        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam odio quidem aliquid voluptatem veritatis maxime eaque voluptatum expedita illo excepturi atque at assumenda quod, delectus ipsa aliquam cupiditate cum tempora.',
+        weightOptions: ['1L', '250ml', '500ml'],
+        images: ['img/Nissy/Newimages/3.jpg', 'img/Nissy/Newimages/6.jpg']
+    },
+    {
+        id: 9,
+        name: 'Crab Pool Security',
+        price: '$30.00',
+        image: 'img/Nissy/Newimages/10.jpg',
+        category: 'fastfood',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam odio quidem aliquid voluptatem veritatis maxime eaque voluptatum expedita illo excepturi atque at assumenda quod, delectus ipsa aliquam cupiditate cum tempora.',
         weightOptions: ['1L', '250ml', '500ml'],
         images: ['img/Nissy/Newimages/3.jpg', 'img/Nissy/Newimages/6.jpg']
@@ -527,7 +597,7 @@ function generateProductHTML(product) {
     return `
     <div class="featured__filter-items col-lg-3 col-md-4 col-sm-6 mix ${product.category}">
         <div class="featured__item">
-            <div class="featured__item__pic set-bg" style="background-image: url(${product.image});">
+            <div class="featured__item__pic set-bg" onclick="location.href='shop-details.html?id=${product.id}'" style="background-image: url(${product.image});">
                 <ul class="featured__item__pic__hover">
                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                     <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
