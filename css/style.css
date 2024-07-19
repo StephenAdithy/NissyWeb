@@ -2540,7 +2540,6 @@ ol {
   Map
 -----------------------*/
 .map {
-  height: 500px;
   position: relative;
 }
 .map iframe {
