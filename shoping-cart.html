@@ -40,14 +40,8 @@
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
                 <li><a href="./index.html">Home</a></li>
-                <li class="active"><a href="./shop-grid.html">Shop</a></li>
-                <li><a href="#">Pages</a>
-                    <ul class="header__menu__dropdown">
-                        <li><a href="./shop-details.html">Shop Details</a></li>
-                        <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                        <li><a href="./checkout.html">Check Out</a></li>
-                    </ul>
-                </li>
+                <li><a href="./shop-grid.html">Products</a></li>
+                <li class="active"><a href="./shop-grid.html">Shopping Cart</a></li>
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -68,16 +62,10 @@
                 <div class="col-lg-6 headalign">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href="./index.html">Home</a></li>
-                            <li><a href="./shop-grid.html">Shop</a></li>
-                            <li><a href="#">Pages</a>
-                                <ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="./contact.html">Contact</a></li>
+                            <li><a href="./index.html">Home</a></li>
+                <li><a href="./shop-grid.html">Products</a></li>
+                <li class="active"><a href="./shop-grid.html">Shopping Cart</a></li>
+                <li><a href="./contact.html">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -88,9 +76,9 @@
                                 <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#myModal">
                                     <i class="fa fa-search"></i>
                                 </button>                       
-                            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
-                        </ul>
+                                <li><a href="#" onclick="showFavoritesPopup()"><i class="fa fa-heart"></i> <span id="favorite-count">0</span></a></li>
+                                <li><a href="shoping-cart.html"><i class="fa fa-shopping-bag"></i> <span id="cart-count">0</span></a></li>
+                            </ul>
                     </div>
                 </div>
             </div>
@@ -152,7 +140,7 @@
                         <div class="shoping__cart__table-items">
                             <h3>Your Cards</h3>
                         </div>
-                        <div class="shoping__cart__table-products">
+                        <!-- <div class="shoping__cart__table-products">
                             <div>
                                 <img src="img/cart/cart-1.jpg" alt="">
                                 <div class="counter">
@@ -173,6 +161,8 @@
                                 </div>
                                 <div class="shoping__cart__table-products-details-remove">REMOVE</div>
                             </div>
+                        </div> -->
+                        <div id="cart-items" class="shoping__cart__table-products">
                         </div>
                     </div>
                 </div>
@@ -180,8 +170,8 @@
                     <div class="shoping__checkout">
                         <h5>Cart Total</h5>
                         <ul>
-                            <li>Subtotal <span>$454.98</span></li>
-                            <li>Total <span>$454.98</span></li>
+                            <li>Subtotal <span class="subtotal"></span></li>
+                            <li>Total <span class="total"></span></li>
                         </ul>
                         <a href="#" class="primary-btn">PROCEED TO CHECKOUT</a>
                     </div>
@@ -274,8 +264,44 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
     <script src="./Response/card.js"></script>
-
-
+    <script src="./Response/index.js"></script>
 </body>
 
 </html>
+
+<style>
+    .shoping__cart__table-products {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.cart-item img {
+    max-width: 100px;
+    margin-right: 15px;
+}
+
+.shoping__cart__table-products-details {
+    flex: 1;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+}
+
+.counter-section-countbutton {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+</style>

@@ -934,14 +934,16 @@ ol {
 }
 
 .featured__item__text-optionbtn {
-  font-size: 20px;
+  font-size: 15px;
   padding: 5px 20px;
   width: 80%;
   margin-top: 15px;
   margin-bottom: 20px;
-  background: #88e188;
+  background: #7fad39;
   border: 1px solid;
-  border-radius: 20px;
+  border-radius: 2px;
+  color: white;
+  font-weight: 700;
   cursor: pointer;
 }
 

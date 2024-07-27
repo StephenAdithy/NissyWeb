@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
     <link rel="stylesheet" href="css/nice-select.css" type="text/css">
     <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" type="text/css">
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
@@ -40,9 +41,8 @@
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
-                <li class="active"><a href="./index.html">Home</a></li>
-                <li><a href="./shop-grid.html">Products</a></li>
-                <li class="active"><a href="./shop-details.html">Shop Details</a></li>
+                <li><a href="./index.html">Home</a></li>
+                <li class="active"><a href="./shop-grid.html">Products</a></li>
                 <li><a href="./contact.html">Contact Us</a></li>
                 <li><a href="./shop-grid.html">About</a></li>
 
@@ -66,15 +66,9 @@
                     <nav class="header__menu">
                         <ul>
                             <li><a href="./index.html">Home</a></li>
-                            <li><a href="./shop-grid.html">Shop</a></li>
-                            <li  class="active"><a href="#" >Pages</a>
-                                <ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="./contact.html">Contact</a></li>
+                            <li class="active"><a href="./shop-grid.html">Products</a></li>
+                            <li><a href="./contact.html">Contact Us</a></li>
+                            <li><a href="./shop-grid.html">About</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -85,8 +79,10 @@
                             <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#myModal">
                                 <i class="fa fa-search"></i>
                             </button>
-                            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                            <li><a href="#" onclick="showFavoritesPopup()"><i class="fa fa-heart"></i> <span
+                                        id="favorite-count">0</span></a></li>
+                            <li><a href="shoping-cart.html"><i class="fa fa-shopping-bag"></i> <span
+                                        id="cart-count">0</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -199,54 +195,21 @@
                                 <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab"
                                     aria-selected="false">Information</a>
                             </li>
-                            
+
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="tabs-1" role="tabpanel">
                                 <div class="product__details__tab__desc">
-                                    <h6>Products Infomation</h6>
-                                    <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
-                                        Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus. Vivamus
-                                        suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam
-                                        vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada.
-                                        Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat,
-                                        accumsan id imperdiet et, porttitor at sem. Praesent sapien massa, convallis a
-                                        pellentesque nec, egestas non nisi. Vestibulum ac diam sit amet quam vehicula
-                                        elementum sed sit amet dui. Vestibulum ante ipsum primis in faucibus orci luctus
-                                        et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam
-                                        vel, ullamcorper sit amet ligula. Proin eget tortor risus.</p>
-                                    <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem
-                                        ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet
-                                        elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed magna dictum
-                                        porta. Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus
-                                        nibh. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
-                                        Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed
-                                        porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum
-                                        sed sit amet dui. Proin eget tortor risus.</p>
+                                    <h6>Products Description</h6>
+                                    <p class="description-tab"></p> <!-- Placeholder for dynamic description -->
                                 </div>
                             </div>
                             <div class="tab-pane" id="tabs-2" role="tabpanel">
                                 <div class="product__details__tab__desc">
-                                    <h6>Products Infomation</h6>
-                                    <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
-                                        Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus.
-                                        Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam
-                                        sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo
-                                        eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat.
-                                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent
-                                        sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ac
-                                        diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante
-                                        ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-                                        Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
-                                        Proin eget tortor risus.</p>
-                                    <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem
-                                        ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet
-                                        elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed magna dictum
-                                        porta. Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus
-                                        nibh. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
+                                    <h6>Products Information</h6>
+                                    <p class="information-tab"></p> <!-- Placeholder for dynamic information -->
                                 </div>
                             </div>
-                            
                         </div>
                     </div>
                 </div>
@@ -291,8 +254,8 @@
                         <div class="map">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49116.39176087041!2d-86.41867791216099!3d39.69977417971648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886ca48c841038a1%3A0x70cfba96bf847f0!2sPlainfield%2C%20IN%2C%20USA!5e0!3m2!1sen!2sbd!4v1586106673811!5m2!1sen!2sbd"
-                                 style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>                    
-                            </div>
+                                style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
                         <div class="footer__widget__social mt-3">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-instagram"></i></a>
@@ -301,14 +264,14 @@
                     </div>
                 </div>
             </div>
-         
+
             <div class="row">
                 <div class="col-lg-12">
                     <div class="footer__copyright">
                         <div class="footer__copyright__text">
                             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 Copyright &copy;
-                                <script>document.write(new Date().getFullYear());</script> All rights reserved 
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved
                             </p>
                         </div>
                     </div>
@@ -320,7 +283,9 @@
 
     <!-- Js Plugins -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
@@ -328,6 +293,7 @@
     <script src="js/mixitup.min.js"></script>
     <!-- <script src="js/owl.carousel.min.js"></script> -->
     <script src="js/main.js"></script>
+    <script src="Response/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 
@@ -338,66 +304,33 @@
         }
 
         function loadProductDetails(id) {
-            let products = {
-                1: {
-                    title: "Crab Pool Security",
-                    price: "$30.00",
-                    description: "Mauris blandit aliquet elit...",
-                    images: [
-                        "img/product/details/product-details-1.jpg",
-                        "img/product/details/thumb-1.jpg",
-                        "img/product/details/thumb-2.jpg",
-                        "img/product/details/thumb-3.jpg",
-                        "img/product/details/thumb-4.jpg"
-                    ],
-                    weights: [
-                        { id: "weight1", value: "1KG", label: "1KG" },
-                        { id: "weight2", value: "250GM", label: "250GM" },
-                        { id: "weight3", value: "500GM", label: "500GM" }
-                    ],
-                    availability: "In Stock",
-                    shipping: "01 day shipping. <samp>Free pickup today</samp>",
-                    weightDetail: "0.5 kg",
-                    rate: "$400.00"
-                },
-                2: {
-                    title: "Another Product",
-                    price: "$50.00",
-                    description: "Vestibulum ante ipsum primis in faucibus orci...",
-                    images: [
-                       "img/product/details/product-details-1.jpg",
-                        "img/product/details/thumb-1.jpg",
-                        "img/product/details/thumb-2.jpg",
-                        "img/product/details/thumb-3.jpg",
-                        "img/product/details/thumb-4.jpg"
-                    ],
-                    weights: [
-                        { id: "weight1", value: "2KG", label: "2KG" },
-                        { id: "weight2", value: "500GM", label: "500GM" },
-                        { id: "weight3", value: "1KG", label: "1KG" }
-                    ],
-                    availability: "Out of Stock",
-                    shipping: "02 day shipping. <samp>No pickup</samp>",
-                    weightDetail: "1.0 kg",
-                    rate: "$500.00"
-                }
-            };
-    
-            let product = products[id];
+            if (typeof products === 'undefined') {
+                console.error('Products data is not available.');
+                return;
+            }
+            debugger
+            const product = products[id];
             if (product) {
-                document.querySelector(".product__details__pic__item img").src = product.images[0];
+                if (product.productImage && product.productImage.length > 0) {
+                document.querySelector(".product__details__pic__item img").src = product.productImage[0];
+                }
                 let slider = document.querySelector(".product__details__pic__slider");
                 slider.innerHTML = "";
-                for (let i = 0; i < product.images.length; i++) {
+                for (let i = 0; i < product.productImage.length; i++) {
                     let img = document.createElement("img");
-                    img.src = product.images[i];
-                    img.setAttribute("data-imgbigurl", product.images[i]);
+                    img.src = product.productImage[i];
+                    img.setAttribute("data-imgbigurl", product.productImage[i]);
+                    img.addEventListener("click", function() {
+                    document.querySelector(".product__details__pic__item img").src = this.src;
+                });
                     slider.appendChild(img);
                 }
-                document.querySelector(".product__details__text h3").innerText = product.title;
+                document.querySelector(".product__details__text h3").innerText = product.name;
                 document.querySelector(".product__details__price").innerText = product.price;
                 document.querySelector(".description_details").innerText = product.description;
-                
+                document.querySelector(".description-tab").innerText = product.productdescription;
+                document.querySelector(".information-tab").innerText = product.information;
+
                 $('.product__details__pic__slider').owlCarousel({
                     loop: true,
                     margin: 10,
@@ -439,7 +372,7 @@
             }
         }
 
-        window.onload = function() {
+        window.onload = function () {
             let productId = getQueryParameter("id");
             if (productId) {
                 loadProductDetails(productId);
@@ -451,7 +384,7 @@
 </html>
 
 <style>
-    .owl-item .active{
+    .owl-item .active {
         width: 115px !important;
     }
 </style>
