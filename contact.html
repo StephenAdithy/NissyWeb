@@ -62,15 +62,10 @@
                     <nav class="header__menu">
                         <ul>
                             <li><a href="./index.html">Home</a></li>
-                            <li><a href="./shop-grid.html">Shop</a></li>
-                            <li><a href="#">Pages</a>
-                                <ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                </ul>
-                            </li>
-                            <li class="active"><a href="./contact.html">Contact</a></li>
+                <li><a href="./shop-grid.html">Products</a></li>
+                <li class="active"><a href="./contact.html">Contact Us</a></li>
+                <li><a href="./shop-grid.html">About</a></li>
+                
                         </ul>
                     </nav>
                 </div>
@@ -81,8 +76,8 @@
                                 <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#myModal">
                                     <i class="fa fa-search"></i>
                                 </button>                       
-                            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                                <li><a href="#" onclick="showFavoritesPopup()"><i class="fa fa-heart"></i> <span id="favorite-count"></span></a></li>
+                                <li><a href="shoping-cart.html"><i class="fa fa-shopping-bag"></i> <span id="cart-count"></span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -347,14 +342,16 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-
-
+    <script src="Response/index.js"></script>
 
 </body>
 
 </html>
 
 <style>
+    .contact__widget{
+        padding: 20px;
+    }
     .modal-content{
         width: 160%;
     }
