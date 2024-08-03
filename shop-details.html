@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"> -->
+
 </head>
 
 <body>
@@ -38,15 +41,11 @@
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
                 <li class="active"><a href="./index.html">Home</a></li>
-                <li><a href="./shop-grid.html">Shop</a></li>
-                <li><a href="#">Pages</a>
-                    <ul class="header__menu__dropdown">
-                        <li><a href="./shop-details.html">Shop Details</a></li>
-                        <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                        <li><a href="./checkout.html">Check Out</a></li>
-                    </ul>
-                </li>
-                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./shop-grid.html">Products</a></li>
+                <li class="active"><a href="./shop-details.html">Shop Details</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+                <li><a href="./shop-grid.html">About</a></li>
+
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -149,18 +148,9 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="product__details__pic">
                         <div class="product__details__pic__item">
-                            <img class="product__details__pic__item--large"
-                                src="img/product/details/product-details-1.jpg" alt="">
+                            <img class="product__details__pic__item--large" src="" alt="">
                         </div>
                         <div class="product__details__pic__slider owl-carousel">
-                            <img data-imgbigurl="img/product/details/product-details-2.jpg"
-                                src="img/product/details/thumb-1.jpg" alt="">
-                            <img data-imgbigurl="img/product/details/product-details-3.jpg"
-                                src="img/product/details/thumb-2.jpg" alt="">
-                            <img data-imgbigurl="img/product/details/product-details-5.jpg"
-                                src="img/product/details/thumb-3.jpg" alt="">
-                            <img data-imgbigurl="img/product/details/product-details-4.jpg"
-                                src="img/product/details/thumb-4.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -168,43 +158,15 @@
                     <div class="product__details__text">
                         <h3>Vetgetable’s Package</h3>
 
-                        <div class="product__details__price">$50.00</div>
-                        <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam
-                            vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Vestibulum ac diam sit amet
-                            quam vehicula elementum sed sit amet dui. Proin eget tortor risus.</p>
+                        <div class="product__details__price"></div>
+                        <p class="description_details"></p>
                         <div class="row">
                             <div class="col-md-12">
                                 <h6><b>WEIGHT</b></h6>
                             </div>
                         </div>
                         <div class="row mt-3">
-                            <div class="col-lg-3 col-md-4 col-sm-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="weight" id="weight1" value="1KG"
-                                        checked>
-                                    <label class="form-check-label" for="weight1">
-                                        1KG
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="weight" id="weight2"
-                                        value="250GM">
-                                    <label class="form-check-label" for="weight2">
-                                        250GM
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="weight" id="weight3"
-                                        value="500GM">
-                                    <label class="form-check-label" for="weight3">
-                                        500GM
-                                    </label>
-                                </div>
-                            </div>
+                            <!-- Radio buttons will be dynamically inserted here -->
                         </div>
                         <div class="mt-4">
                             <div class="product__details__quantity">
@@ -218,11 +180,11 @@
                             <a href="#" class="primary-btn">BUY NOW</a>
                         </div>
                         <!-- <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a> -->
-                        <ul>
-                            <li><b>Availability</b> <span>In Stock</span></li>
-                            <li><b>Shipping</b> <span>01 day shipping. <samp>Free pickup today</samp></span></li>
-                            <li><b>Weight</b> <span>0.5 kg</span></li>
-                            <li><b>Rate</b>$400.00</li>
+                        <ul class="product-details-info">
+                            <li><b>Availability</b> <span></span></li>
+                            <li><b>Shipping</b> <span></span></li>
+                            <li><b>Weight</b> <span></span></li>
+                            <li><b>Rate</b><span></span></li>
                         </ul>
                     </div>
                 </div>
@@ -237,10 +199,7 @@
                                 <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab"
                                     aria-selected="false">Information</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab"
-                                    aria-selected="false">Reviews <span>(1)</span></a>
-                            </li>
+                            
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="tabs-1" role="tabpanel">
@@ -287,22 +246,7 @@
                                         nibh. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="tabs-3" role="tabpanel">
-                                <div class="product__details__tab__desc">
-                                    <h6>Products Infomation</h6>
-                                    <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
-                                        Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus.
-                                        Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam
-                                        sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo
-                                        eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat.
-                                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent
-                                        sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ac
-                                        diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante
-                                        ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-                                        Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
-                                        Proin eget tortor risus.</p>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -310,82 +254,6 @@
         </div>
     </section>
     <!-- Product Details Section End -->
-
-    <!-- Related Product Section Begin -->
-    <section class="related-product">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title related__product__title">
-                        <h2>Related Product</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-1.jpg">
-                            <ul class="product__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-2.jpg">
-                            <ul class="product__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-3.jpg">
-                            <ul class="product__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-7.jpg">
-                            <ul class="product__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Related Product Section End -->
 
     <!-- Footer Section Begin -->
     <footer class="footer spad">
@@ -408,18 +276,12 @@
                         <h6>Useful Links</h6>
                         <ul>
                             <li><a href="#">About Us</a></li>
-                            <li><a href="#">About Our Shop</a></li>
-                            <li><a href="#">Secure Shopping</a></li>
                             <li><a href="#">Delivery infomation</a></li>
                             <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Our Sitemap</a></li>
                         </ul>
                         <ul>
                             <li><a href="#">Who We Are</a></li>
                             <li><a href="#">Our Services</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Innovation</a></li>
                             <li><a href="#">Testimonials</a></li>
                         </ul>
                     </div>
@@ -435,7 +297,6 @@
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-instagram"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
                         </div>
                     </div>
                 </div>
@@ -447,10 +308,7 @@
                         <div class="footer__copyright__text">
                             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 Copyright &copy;
-                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This
-                                template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a
-                                    href="https://colorlib.com" target="_blank">Colorlib</a>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved 
                             </p>
                         </div>
                     </div>
@@ -461,16 +319,139 @@
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/mixitup.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
+    <!-- <script src="js/owl.carousel.min.js"></script> -->
     <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 
+    <script>
+        function getQueryParameter(name) {
+            let urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        function loadProductDetails(id) {
+            let products = {
+                1: {
+                    title: "Crab Pool Security",
+                    price: "$30.00",
+                    description: "Mauris blandit aliquet elit...",
+                    images: [
+                        "img/product/details/product-details-1.jpg",
+                        "img/product/details/thumb-1.jpg",
+                        "img/product/details/thumb-2.jpg",
+                        "img/product/details/thumb-3.jpg",
+                        "img/product/details/thumb-4.jpg"
+                    ],
+                    weights: [
+                        { id: "weight1", value: "1KG", label: "1KG" },
+                        { id: "weight2", value: "250GM", label: "250GM" },
+                        { id: "weight3", value: "500GM", label: "500GM" }
+                    ],
+                    availability: "In Stock",
+                    shipping: "01 day shipping. <samp>Free pickup today</samp>",
+                    weightDetail: "0.5 kg",
+                    rate: "$400.00"
+                },
+                2: {
+                    title: "Another Product",
+                    price: "$50.00",
+                    description: "Vestibulum ante ipsum primis in faucibus orci...",
+                    images: [
+                       "img/product/details/product-details-1.jpg",
+                        "img/product/details/thumb-1.jpg",
+                        "img/product/details/thumb-2.jpg",
+                        "img/product/details/thumb-3.jpg",
+                        "img/product/details/thumb-4.jpg"
+                    ],
+                    weights: [
+                        { id: "weight1", value: "2KG", label: "2KG" },
+                        { id: "weight2", value: "500GM", label: "500GM" },
+                        { id: "weight3", value: "1KG", label: "1KG" }
+                    ],
+                    availability: "Out of Stock",
+                    shipping: "02 day shipping. <samp>No pickup</samp>",
+                    weightDetail: "1.0 kg",
+                    rate: "$500.00"
+                }
+            };
+    
+            let product = products[id];
+            if (product) {
+                document.querySelector(".product__details__pic__item img").src = product.images[0];
+                let slider = document.querySelector(".product__details__pic__slider");
+                slider.innerHTML = "";
+                for (let i = 0; i < product.images.length; i++) {
+                    let img = document.createElement("img");
+                    img.src = product.images[i];
+                    img.setAttribute("data-imgbigurl", product.images[i]);
+                    slider.appendChild(img);
+                }
+                document.querySelector(".product__details__text h3").innerText = product.title;
+                document.querySelector(".product__details__price").innerText = product.price;
+                document.querySelector(".description_details").innerText = product.description;
+                
+                $('.product__details__pic__slider').owlCarousel({
+                    loop: true,
+                    margin: 10,
+                    nav: false,
+                    items: 4
+                });
+
+                let weightContainer = document.querySelector(".row.mt-3");
+                weightContainer.innerHTML = "";
+                product.weights.forEach((weight, index) => {
+                    let col = document.createElement("div");
+                    col.className = "col-lg-3 col-md-4 col-sm-4";
+                    let formCheck = document.createElement("div");
+                    formCheck.className = "form-check";
+                    let input = document.createElement("input");
+                    input.className = "form-check-input";
+                    input.type = "radio";
+                    input.name = "weight";
+                    input.id = weight.id;
+                    input.value = weight.value;
+                    if (index === 0) {
+                        input.checked = true;
+                    }
+                    let label = document.createElement("label");
+                    label.className = "form-check-label";
+                    label.setAttribute("for", weight.id);
+                    label.innerText = weight.label;
+                    formCheck.appendChild(input);
+                    formCheck.appendChild(label);
+                    col.appendChild(formCheck);
+                    weightContainer.appendChild(col);
+                });
+
+                let infoList = document.querySelector(".product-details-info");
+                infoList.querySelector("li:nth-child(1) span").innerText = product.availability;
+                infoList.querySelector("li:nth-child(2) span").innerHTML = product.shipping;
+                infoList.querySelector("li:nth-child(3) span").innerText = product.weightDetail;
+                infoList.querySelector("li:nth-child(4) span").innerText = product.rate;
+            }
+        }
+
+        window.onload = function() {
+            let productId = getQueryParameter("id");
+            if (productId) {
+                loadProductDetails(productId);
+            }
+        };
+    </script>
 </body>
 
 </html>
+
+<style>
+    .owl-item .active{
+        width: 115px !important;
+    }
+</style>

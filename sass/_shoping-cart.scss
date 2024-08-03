@@ -9,96 +9,42 @@
 .shoping__cart__table {
     margin-bottom: 30px;
 
-    table {
-        width: 100%;
-        text-align: center;
+    &-items{
+        padding-bottom: 25px;
+    }
 
-        thead {
+    &-products {
+        display: flex;
+        border-bottom: 1px solid beige;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        gap: 20px;
 
-            tr {
-                border-bottom: 1px solid $border;
-            }
-
-            th {
-                font-size: 20px;
-                font-weight: 700;
-                color: $normal-color;
-                padding-bottom: 20px;
-
-                &.shoping__product {
-                    text-align: left;
-                }
-            }
+        img {
+            width: 150px;
         }
 
-        tbody {
+        &-details {
 
-            tr {
+            &-para{
+                font-size: 12px;
+            }
 
-                td {
-                    padding-top: 30px;
-                    padding-bottom: 30px;
-                    border-bottom: 1px solid $border;
+            &-amtcounter {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding-bottom: 15px;
+                padding-top: 12px;
+            }
 
-                    &.shoping__cart__item {
-                        width: 630px;
-                        text-align: left;
+            &-remove{
+                padding-top: 15px;
+                font-weight: 600;
+                cursor: pointer;
 
-                        img {
-                            display: inline-block;
-                            margin-right: 25px;
-                        }
-
-                        h5 {
-                            color: $normal-color;
-                            display: inline-block;
-                        }
-                    }
-
-                    &.shoping__cart__price {
-                        font-size: 18px;
-                        color: $normal-color;
-                        font-weight: 700;
-                        width: 100px;
-                    }
-
-                    &.shoping__cart__total {
-                        font-size: 18px;
-                        color: $normal-color;
-                        font-weight: 700;
-                        width: 110px;
-                    }
-
-                    &.shoping__cart__item__close {
-                        text-align: right;
-
-                        span {
-                            font-size: 24px;
-                            color: #b2b2b2;
-                            cursor: pointer;
-                        }
-                    }
-
-                    &.shoping__cart__quantity {
-                        width: 225px;
-
-                        .pro-qty {
-                            width: 120px;
-                            height: 40px;
-
-                            input {
-                                color: $normal-color;
-
-                                &::placeholder {
-                                    color: $normal-color;
-                                }
-                            }
-
-                            .qtybtn {
-                                width: 15px;
-                            }
-                        }
-                    }
+                &:hover{
+                    color: green;
                 }
             }
         }
@@ -118,8 +64,6 @@
         float: right;
     }
 }
-
-.shoping__continue {}
 
 .shoping__discount {
     margin-top: 45px;
@@ -201,4 +145,39 @@
         display: block;
         text-align: center;
     }
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.counter-section-countbutton {
+    width: 40px;
+    height: 40px;
+    background-color: #009E60;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.counter-section-countbutton:hover {
+    background-color: #87dab9;
+}
+
+.counter-section-countbutton:active {
+    background-color: #87dab9;
+}
+
+#quantity {
+    width: 40px;
+    text-align: center;
 }
