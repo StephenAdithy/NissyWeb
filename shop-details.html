@@ -164,17 +164,7 @@
                         <div class="row mt-3">
                             <!-- Radio buttons will be dynamically inserted here -->
                         </div>
-                        <div class="mt-4">
-                            <div class="product__details__quantity">
-                                <div class="quantity">
-                                    <div class="pro-qty">
-                                        <input type="text" value="1">
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#" class="primary-btn">ADD TO CARD</a>
-                            <a href="#" class="primary-btn">BUY NOW</a>
-                        </div>
+                        <div id="product-details-container"></div>
                         <!-- <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a> -->
                         <ul class="product-details-info">
                             <li><b>Availability</b> <span></span></li>
@@ -294,91 +284,9 @@
     <!-- <script src="js/owl.carousel.min.js"></script> -->
     <script src="js/main.js"></script>
     <script src="Response/index.js"></script>
+    <script src="Response/ProductDetails.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-
-    <script>
-        function getQueryParameter(name) {
-            let urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(name);
-        }
-
-        function loadProductDetails(id) {
-            if (typeof products === 'undefined') {
-                console.error('Products data is not available.');
-                return;
-            }
-            debugger
-            const product = products[id];
-            if (product) {
-                if (product.productImage && product.productImage.length > 0) {
-                document.querySelector(".product__details__pic__item img").src = product.productImage[0];
-                }
-                let slider = document.querySelector(".product__details__pic__slider");
-                slider.innerHTML = "";
-                for (let i = 0; i < product.productImage.length; i++) {
-                    let img = document.createElement("img");
-                    img.src = product.productImage[i];
-                    img.setAttribute("data-imgbigurl", product.productImage[i]);
-                    img.addEventListener("click", function() {
-                    document.querySelector(".product__details__pic__item img").src = this.src;
-                });
-                    slider.appendChild(img);
-                }
-                document.querySelector(".product__details__text h3").innerText = product.name;
-                document.querySelector(".product__details__price").innerText = product.price;
-                document.querySelector(".description_details").innerText = product.description;
-                document.querySelector(".description-tab").innerText = product.productdescription;
-                document.querySelector(".information-tab").innerText = product.information;
-
-                $('.product__details__pic__slider').owlCarousel({
-                    loop: true,
-                    margin: 10,
-                    nav: false,
-                    items: 4
-                });
-
-                let weightContainer = document.querySelector(".row.mt-3");
-                weightContainer.innerHTML = "";
-                product.weights.forEach((weight, index) => {
-                    let col = document.createElement("div");
-                    col.className = "col-lg-3 col-md-4 col-sm-4";
-                    let formCheck = document.createElement("div");
-                    formCheck.className = "form-check";
-                    let input = document.createElement("input");
-                    input.className = "form-check-input";
-                    input.type = "radio";
-                    input.name = "weight";
-                    input.id = weight.id;
-                    input.value = weight.value;
-                    if (index === 0) {
-                        input.checked = true;
-                    }
-                    let label = document.createElement("label");
-                    label.className = "form-check-label";
-                    label.setAttribute("for", weight.id);
-                    label.innerText = weight.label;
-                    formCheck.appendChild(input);
-                    formCheck.appendChild(label);
-                    col.appendChild(formCheck);
-                    weightContainer.appendChild(col);
-                });
-
-                let infoList = document.querySelector(".product-details-info");
-                infoList.querySelector("li:nth-child(1) span").innerText = product.availability;
-                infoList.querySelector("li:nth-child(2) span").innerHTML = product.shipping;
-                infoList.querySelector("li:nth-child(3) span").innerText = product.weightDetail;
-                infoList.querySelector("li:nth-child(4) span").innerText = product.rate;
-            }
-        }
-
-        window.onload = function () {
-            let productId = getQueryParameter("id");
-            if (productId) {
-                loadProductDetails(productId);
-            }
-        };
-    </script>
 </body>
 
 </html>

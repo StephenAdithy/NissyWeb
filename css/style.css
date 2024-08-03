@@ -757,6 +757,7 @@ ol {
   position: relative;
   overflow: hidden;
   background-position: center center;
+  transition: background-image 0.3s ease-in-out;
 }
 
 .featured__item__pic__hover {
@@ -3191,3 +3192,38 @@ ol {
     font-size: 24px;
   }
 }/*# sourceMappingURL=style.css.map */
+
+
+
+/* Toast container */
+.toast {
+  visibility: hidden; /* Hidden by default */
+  min-width: 250px; /* Set a minimum width */
+  margin-left: -125px; /* Center the toast */
+  background-color: #333; /* Black background */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded corners */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Make sure it does not get hidden */
+  bottom: 30px; /* 30px from the bottom */
+  left: 50%; /* Center the toast horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+  padding: 16px; /* Some padding */
+  font-size: 17px; /* Font size */
+}
+
+/* Show the toast */
+.toast.show {
+  visibility: visible; /* Show the toast */
+  /* Add animation */
+  animation: fadeInOut 3s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
